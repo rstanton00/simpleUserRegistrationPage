@@ -2,42 +2,79 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ultimate Frisbee - History</title>
+	<title></title>
 	<link rel="stylesheet" href="css/hw1.css">
 </head>
 <body>
+  <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 	<header>
 		<h1>Please Enter Your Details For Our Dating Website!</h1>
 	</header>
-		<form>
+		<form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
 			<fieldset>
 				<legend>Your Face</legend>
-				Your image <input type="file" id="preview" name="image"> <br>
-				Image preview:
+				<label for="image">Your image: </label>
+				   <input type="file" id="image" name="image" required> <br>
+				<label for="preview">Image preview: </label>
+				   <img id="preview">
 			</fieldset>
 			<br>
 			<fieldset>
 				<legend>Your General Details</legend>
-				Name: <input type="text" name="fullName" placeholder="Your full name" required> <br>
-				Gender: <input type="radio" name="gender" value="male"> Male
-               <input type="radio" name="gender" value="female"> Female<br>
-				Age: <input type="number" name="age" required><br>
-				Date of birth: <input type="date" name="dob"><br>
-				Favorite color: <input type="color" name="color"><br>
-				Which country: <select>
-					               <option value="none"></option>
-												 <option value="britain">Great Britain</option>
-												 <option value="taiwan">Taiwan</option>
-												 <option value="germany">Germany</option>
-												 <option value="rwanda">Rwanda</option>
-											 </select>
+				  <label for="fullName">Name: </label>
+				    <input type="text" name="fullName" placeholder="Your full name" required> <br>
+				  <label for="gender">Gender: </label>
+				    <input type="radio" name="sexType" id="sexType" value="male" required><label for="sex">Male</label>
+            <input type="radio" name="sexType" id="sexType" value="female" required><label for="sex">Female</label>
+          <br>
+					<label for="age">Age: </label>
+				    <input type="number" name="age" required><br>
+					<label for="date">Date of birth: </label>
+				    <input type="date" name="dob"><br>
+				  <label for="color">Favorite color: </label>
+					  <input type="color" name="color"><br>
+					<label for="country">Which country: </label>
+				    <select name="country">
+              <option value="none"></option>
+              <option value="britain">Great Britain</option>
+              <option value="taiwan">Taiwan</option>
+              <option value="germany">India</option>
+              <option value="rwanda">Rwanda</option>
+              <option value="rwanda">Syria</option>
+            </select>
 			</fieldset>
 			<br>
 			<fieldset>
 				<legend>Your Indicators</legend>
+				  <label for="height">Height: </label>
+				    <span class="leftlabel">Short </span>
+            <input type="range" name="height" min="0" max="100">
+            <span class="rightlabel"> Tall</span>
+				  <br>
+				  <label for="salary">Salary: </label>
+				    <span class="leftlabel">Poor </span>
+            <input type="range" name="salary" min="0" max="100">
+            <span class="rightlabel"> Rich</span>
 			</fieldset>
 			<br>
-			<input type="submit" value="Send">
+			<fieldset>
+        <legend>Your Contact Information</legend>
+				<label for="email">Email: </label>
+				  <input type="email" name="email" required>
+				<br>
+        <label for="mobile">Mobile: </label>
+				  <input type="tel" name="mobile">
+				<br>
+        <label for="address">Address: </label>
+  				<textarea name="address"></textarea>
+				<br>
+        <label for="contactMethodHead">Method to contact you: </label>
+  				<input type="checkbox" name="contactMethod" value="email"><label for="contactMethod">Email</label>
+  				<input type="checkbox" name="contactMethod" value="whatsapp"><label for="contactMethod">Whatsapp</label>
+					<input type="checkbox" name="contactMethod" value="chat"><label for="contactMethod">In-app chat</label>
+			</fieldset>
+			<br>
+			<input type="submit" value="Submit">
 		</form>
 </body>
 </html>

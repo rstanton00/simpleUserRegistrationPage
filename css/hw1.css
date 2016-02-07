@@ -1,0 +1,49 @@
+fieldset {
+  width: 720px;
+  background: lightyellow;
+  border: 10px solid yellow;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 180px;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+}
+
+label:hover {
+  font-size: 25px;
+}
+
+label[for=contactMethod] {
+  width: auto;
+}
+
+label[for=sex] {
+  width: auto;
+}
+
+.leftlabel, .rightlabel {
+  display: inline-block;
+  width: 50px;
+  padding: 2px;
+  text-align: center;
+}
+
+.leftlabel {
+  background-color: red;
+}
+
+.rightlabel {
+  background-color: purple;
+}
+
+input:hover {
+  font-size: 25px;
+}
+
+textarea {
+  width: 360px;
+  height: 50px;
+}
